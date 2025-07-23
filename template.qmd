@@ -1,0 +1,81 @@
+---
+title: "Amazing Title"
+subtitle: "Amazing Subtitle"
+author: 
+  - name: John Doe
+    orcid: 0000-0000-0000-0000
+    email: johndoe@gmail.com
+    affiliations: The School of John Doe
+  - name: Jane Doe
+    orcid: 0000-0000-0000-0001
+    email: janedoe@gmail.com
+    affiliations: The School of Jane Doe
+format: mocha-revealjs
+---
+
+## Example slide
+### Example subtitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida placerat risus nec ultrices. Praesent lacinia eros non velit sagittis, in placerat lorem euismod. Sed condimentum mi ac vestibulum tempus. Praesent eget neque et urna aliquam dictum et porta sapien. Maecenas et lobortis odio. Mauris quis sem aliquam, congue sapien nec, laoreet lorem. Maecenas ut ultricies massa, id viverra libero. Morbi nec feugiat metus. Fusce porttitor viverra tortor, vitae suscipit odio dapibus sed. Vestibulum maximus tortor sed ipsum efficitur, eu cursus enim aliquam.
+
+## Example slide
+### Custom bolded text
+
+**Lorem ipsum** dolor sit amet, consectetur adipiscing elit. Nulla gravida placerat risus nec ultrices. Praesent lacinia eros non velit sagittis, in placerat lorem euismod. Sed condimentum mi ac vestibulum tempus. Praesent eget neque et urna aliquam dictum et porta sapien. **Maecenas et lobortis odio**. Mauris quis sem aliquam, congue sapien nec, laoreet lorem. Maecenas ut ultricies massa, id viverra libero. Morbi nec feugiat metus. Fusce porttitor viverra tortor, vitae suscipit odio dapibus sed. Vestibulum maximus tortor sed ipsum efficitur, eu **cursus enim aliquam**.
+
+::: {.fragment}
+This is an example of [text with a link](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+## Example slide
+### Example subtitle
+
+**Unordered List**
+
+- Item 1 
+  - Sub item 1
+  - Sub item 2
+  
+**Ordered List**
+
+1. Item 1
+    i) Sub item 1
+    ii) Sub item 2
+
+## Example slide
+### Example subtitle
+
+```{r}
+#| label: tbl-model-fit
+#| tbl-cap: "Example of a table caption"
+#| echo: true
+
+x    <- rnorm(n = 10, mean = 10, sd = 5)
+y    <- x * runif(n = 10, min = 0, max = 1)
+
+data <- data.frame(y = y, x = x)
+
+fit  <- glm(formula = y ~ x, data = data)
+
+broom::tidy(fit) |> kableExtra::kbl(align = "c", digits = 2)
+```
+
+
+## Example slide
+### Example subtitle
+
+```{r}
+#| label: fig-example
+#| fig-cap: "Example of a figure caption"
+
+require(ggplot2)
+
+source(here::here("R/theme_mocha.R"))
+
+data |>
+  ggplot(aes(x = x, y = y)) +
+  geom_line(colour = "#f2cdcd") +
+  theme_mocha()
+```
+
+

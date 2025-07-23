@@ -1,0 +1,10 @@
+title: mocha
+author: Cormac Monaghan
+version: 0.0.9
+quarto-required: ">=1.3.0"
+contributes: 
+  formats: 
+    revealjs:
+      theme: mocha.scss
+      highlight-style: github-dark
+      slide-number: c

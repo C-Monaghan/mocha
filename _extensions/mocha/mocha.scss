@@ -1,0 +1,227 @@
+/*-- scss:defaults --*/
+
+// -----------------------------------------------------------------------------
+// Mocha Color Palette (there are other colours but I have kept it minimum)
+// -----------------------------------------------------------------------------
+
+$base:    #1e1e2e !default;   // Base background color
+$text:    #cdd6f4 !default;   // Default text colour
+$mauve:   #cba6f7 !default;   // Accent color (links and highlights)
+
+$link-colour: $mauve !default;
+
+// Code formatting colors ------------------------------------------------------
+$code-bg: $base !default;     // Inline code (background)
+$code-colour: $text !default; // Inline code (text)
+
+$code-block-bg: lighten($base, 5%) !default; // Background color (fenced code) 
+$code-block-border-color: $text !default;    // Border color for code blocks
+
+$btn-code-copy-color: $text !default;       // // Copy-to-clipboard color
+
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+// -----------------------------------------------------------------------------
+// Fonts and Typography
+// -----------------------------------------------------------------------------
+
+// Import a clean, humanist sans-serif typeface from Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300,300i,400,400i,500,500i,700,700i);
+
+
+$font-family-sans-serif: 'Alegreya Sans', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', sans-serif !default;
+
+// Base font size for slide content
+$presentation-font-size-root: 32px;
+
+/*-- scss:rules --*/
+
+// -----------------------------------------------------------------------------
+// Title Slide Styling
+// -----------------------------------------------------------------------------
+
+#title-slide {
+  text-align: left;
+  
+  // The title
+  .title {
+    color: $text;
+    font-size: 1.6em;
+  }
+  
+  // The subtitle (italic, lighter weight, no spacing from title)
+  .subtitle {
+    color: $text;
+    font-style: italic;
+    margin-top: 0em;
+    font-weight: lighter;
+  }
+  
+    // Author name styling (single or multiple)
+  .author,
+  .quarto-title-author-name {
+    color: $text;
+  }
+  
+  // Layout for multiple authors (using flexbox for horizontal alignment)
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+
+    .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%; // Full-width for each author block
+    }
+  }
+
+  // Institution name and author email styling (italicised)
+  .institute,
+  .quarto-title-affiliation,
+  .quarto-title-author-email {
+    font-style: italic;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Slide Headings
+// -----------------------------------------------------------------------------
+
+.reveal h3 {
+  color: $text;             // match the body text color
+  font-style: italic;       // Italic style
+  font-weight: lighter;     // Use a softer font
+  font-size: 0.95em;        // Use a smaller font
+}
+
+// -----------------------------------------------------------------------------
+// Slide Links and Paragraph Text
+// -----------------------------------------------------------------------------
+
+.reveal a {
+  color: $link-colour;
+  line-height: 1.5em;
+}
+
+.reveal p {
+  font-weight: lighter;
+  margin-top: 1.25em;
+}
+
+.reveal strong {
+  font-weight: bold; 
+  color: $mauve;
+}
+
+// -----------------------------------------------------------------------------
+// Slide Lists
+// -----------------------------------------------------------------------------
+
+// Unordered lists
+.reveal ul {
+  font-weight: lighter;       // Use lighter font weight
+  padding-left: 16px;         // Add padding to the left
+}
+
+// Ordered lists
+.reveal ol {
+  font-weight: lighter;       // Use lighter font weight
+  padding-left: 16px;         // Add padding to the left
+}
+
+// Individual list items
+.reveal li {
+  padding: 0px;               // Increase vertical spacing between list items
+}
+
+// Nested unordered lists
+.reveal ul ul {
+  list-style: none;           // Remove default bullet style for nested lists
+
+  li:before {
+    content: $right-arrow;    // Insert right arrow character 
+    color: $text;             // Set arrow color
+    display: inline-block;    // Ensure the arrow occupies a consistent width
+    width: 1em;
+    margin-left: -1em;        // Adjust positioning to align arrow and list text
+    margin-right: 0.5em;
+  }
+}
+
+// Nested ordered lists (keep the same formatting as nested unordered)
+.reveal ol ol {
+  li:before {
+    margin-left: -1em;        // Adjust positioning to align with list text
+    margin-right: 0.5em;
+  }
+}
+
+.reveal .slide-number>a[href*='title-slide'] {
+  display: none;
+}
+
+.slide-number,
+.reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 10px !important;
+  top: unset !important;
+  color: $text !important;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Table Styling
+// -----------------------------------------------------------------------------
+
+// Add bottom borders to tables for visual separation
+.reveal table thead th,
+.reveal .slides table tr:last-child td,
+.reveal .slides table {
+  border-bottom: 2px solid #D3D3D3; // Light grey
+}
+
+// Make table headers bold
+.reveal table thead th {
+  font-weight: bold;
+  color: $text;
+  font-size: 1em;
+}
+
+// Reduce font size of table text slightly
+.reveal table tbody td {
+  font-size: 0.85em;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.5em 0.5em; // vertical | horizontal padding
+}
+
+.reveal table {
+  margin-top: 0.25em;
+}
+
+// -----------------------------------------------------------------------------
+// Code Annotation Styling (for Quarto source code blocks)
+// -----------------------------------------------------------------------------
+
+// Style for inactive (default) annotation anchor elements in code blocks
+code.sourceCode .code-annotation-anchor {
+  // Text and border color use a darker version of the main body text color
+  color: darken($code-colour, 25%) !important;
+  border-color: darken($code-colour, 25%) !important;
+  
+  // Background color matches the page background to blend in
+  background-color: $code-bg !important;
+}
+
+// Background color matches the page background to blend in
+code.sourceCode .code-annotation-anchor .code-annotation-active {
+  // Invert the color scheme for visual feedback (e.g. hover or active)
+  color: $code-colour !important;
+  border-color: $code-bg !important;
+  background-color: darken($code-colour, 25%) !important;
+}
