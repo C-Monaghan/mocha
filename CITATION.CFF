@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: "Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js"
+message: "If you use this project, please cite it as below."
+type: software
+authors:
+  - family-names: "Monaghan"
+    given-names: "Cormac"
+    orcid: "https://orcid.org/0000-0001-9012-3060"
+repository-code: "https://github.com/C-Monaghan/mocha"
+url: "https://c-monaghan.github.io/talks/mocha.html#/title-slide"
+license: "MIT"
+date-released: "2025-07-23"
+version: 0.0.9
