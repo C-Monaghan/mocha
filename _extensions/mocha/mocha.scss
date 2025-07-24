@@ -8,6 +8,8 @@ $base:    #1e1e2e !default;   // Base background color
 $text:    #cdd6f4 !default;   // Default text colour
 $mauve:   #cba6f7 !default;   // Accent color (links and highlights)
 
+$body-bg: $base !default;
+$body-colour: $base !default;
 $link-colour: $mauve !default;
 
 // Code formatting colors ------------------------------------------------------
@@ -79,6 +81,7 @@ $presentation-font-size-root: 32px;
   .institute,
   .quarto-title-affiliation,
   .quarto-title-author-email {
+    color: $text;
     font-style: italic;
   }
 }
@@ -86,6 +89,14 @@ $presentation-font-size-root: 32px;
 // -----------------------------------------------------------------------------
 // Slide Headings
 // -----------------------------------------------------------------------------
+
+.reveal h1 {
+  color: $text;             // match the body text color
+}
+
+.reveal h2 {
+  color: $text;             // match the body text color
+}
 
 .reveal h3 {
   color: $text;             // match the body text color
@@ -105,6 +116,7 @@ $presentation-font-size-root: 32px;
 
 .reveal p {
   font-weight: lighter;
+  color: $text;
   margin-top: 1.25em;
 }
 
@@ -119,12 +131,14 @@ $presentation-font-size-root: 32px;
 
 // Unordered lists
 .reveal ul {
+  color: $text;
   font-weight: lighter;       // Use lighter font weight
   padding-left: 16px;         // Add padding to the left
 }
 
 // Ordered lists
 .reveal ol {
+  color: $text;
   font-weight: lighter;       // Use lighter font weight
   padding-left: 16px;         // Add padding to the left
 }
@@ -192,6 +206,7 @@ $presentation-font-size-root: 32px;
 
 // Reduce font size of table text slightly
 .reveal table tbody td {
+  color: $text;
   font-size: 0.85em;
 }
 
@@ -203,6 +218,12 @@ $presentation-font-size-root: 32px;
 .reveal table {
   margin-top: 0.25em;
 }
+
+/* Styling table captions */
+.reveal table caption {
+  color: $text;
+}
+
 
 // -----------------------------------------------------------------------------
 // Code Annotation Styling (for Quarto source code blocks)
