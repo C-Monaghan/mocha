@@ -2,6 +2,10 @@
 
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
+<!-- badges: start -->
+[![License](https://img.shields.io/github/license/C-Monaghan/mocha.png)](LICENSE)
+<!-- badges: end -->
+
 ## 🧁 Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js
 
 A lovingly crafted **Catppuccin Mocha** theme for
@@ -26,6 +30,18 @@ and Mickaël Canouil’s
 
 ## 📦 Installation
 
+This [Quarto](quarto.org) extension can be installed/used using the
+following command:
+
 ``` bash
 quarto install extension C-Monaghan/mocha
+```
+
+Alternatively, if you wish to have a small template ready to go you can
+use a [Quarto
+template](https://quarto.org/docs/extensions/starter-templates.html)
+that bundles the mocha theme plus a .qmd starter document.
+
+``` bash
+quarto use template C-Monaghan/mocha
 ```

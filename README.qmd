@@ -8,6 +8,9 @@ format: gfm
 
 library(emoji)
 ```
+<!-- badges: start -->
+[![License](https://img.shields.io/github/license/C-Monaghan/mocha)](LICENSE)
+<!-- badges: end -->
 
 ## `r emoji_glue(":cupcake:")` Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js
 
@@ -30,6 +33,14 @@ and Mickaël Canouil's [coeos](https://github.com/mcanouil/quarto-revealjs-coeos
 
 ## `r emoji_glue(":package:")` Installation
 
+This [Quarto](quarto.org) extension can be installed/used using the following command:
+
 ```bash
 quarto install extension C-Monaghan/mocha
+```
+
+Alternatively, if you wish to have a small template ready to go you can use a [Quarto template](https://quarto.org/docs/extensions/starter-templates.html) that bundles the mocha theme plus a .qmd starter document.
+
+```bash
+quarto use template C-Monaghan/mocha
 ```
