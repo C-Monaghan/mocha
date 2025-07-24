@@ -10,7 +10,9 @@ author:
     orcid: 0000-0000-0000-0001
     email: janedoe@gmail.com
     affiliations: The School of Jane Doe
-format: mocha-revealjs
+format: 
+  mocha-revealjs:
+    self-contained: true 
 ---
 
 ## Example slide
