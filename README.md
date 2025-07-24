@@ -3,6 +3,7 @@
 <!-- README.md is generated from README.qmd. Please edit that file -->
 
 <!-- badges: start -->
+
 [![License](https://img.shields.io/github/license/C-Monaghan/mocha.png)](LICENSE)
 <!-- badges: end -->
 
@@ -15,7 +16,7 @@ revealjs](https://github.com/grantmcdermott/quarto-revealjs-clean/tree/main)
 and Mickaël Canouil’s
 [coeos](https://github.com/mcanouil/quarto-revealjs-coeos) themes.
 
-![](./mocha-title.png)
+![./mocha-title.png](https://c-monaghan.github.io/talks/mocha.html#/title-slide.png)
 
 ## ✨ Features
 
