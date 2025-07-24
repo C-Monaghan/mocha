@@ -16,7 +16,7 @@ revealjs](https://github.com/grantmcdermott/quarto-revealjs-clean/tree/main)
 and Mickaël Canouil’s
 [coeos](https://github.com/mcanouil/quarto-revealjs-coeos) themes.
 
-![./mocha-title.png](https://c-monaghan.github.io/talks/mocha.html#/title-slide.png)
+[![](./mocha-title.png)](https://c-monaghan.github.io/talks/mocha.html#/title-slide)
 
 ## ✨ Features
 
